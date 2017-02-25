@@ -10,20 +10,25 @@ class Funcion{
 	private:
 		int coe;
 		vector <int>* funcion; 
-		Funcion* funcion_1;
 
 	public:
 		//constructor
 		Funcion();
 		Funcion(int);
-
+		//inicializar el vector con los 6 valores 
+		void initVect();
 		//Mutadores
-		void setVect(int);
-		vector <int>* getVect();
-
+		void setVector(int);
+		vector <int>* getVector();
+		void setCoe(int);
+		int getCoe();
 
 		//operators
-		 vector <int>* operator+(Funcion*);
-		 vector <int>* operator-(Funcion*);	
+		 Funcion* operator+(Funcion*);
+		 Funcion* operator-(Funcion*);	
+		 Funcion* operator/(Funcion*);
+		 Funcion* operator==(Funcion*);
+		 Funcion* operator!=(Funcion*);
+		 
 };
 #endif
